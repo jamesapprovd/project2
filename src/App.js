@@ -13,12 +13,9 @@ function App() {
 
   return (
     <>
-      <h1>SANCTIONS CHECKER</h1>
-
       <NavBar />
       <Routes>
         <Route path="/" element={<Introduction />} />
-
         <Route path="/sanctiontypes" element={<SanctionTypes />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
       </Routes>
