@@ -3,7 +3,8 @@ import React from "react";
 const Disclaimer = () => {
   return (
     <div>
-      <h1>Disclaimer</h1>
+      <br />
+      <h3>Disclaimer</h3>
       <p>
         Data from this sanctions checker is obtained from Opensanctions.org
         <br />

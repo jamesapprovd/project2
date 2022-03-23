@@ -3,7 +3,8 @@ import React from "react";
 const SanctionTypes = () => {
   return (
     <div>
-      <h1>Types of sanctions</h1>
+      <br />
+      <h3>Types of sanctions</h3>
       <p>
         Sanctions lists are lists of persons and entities subject to
         comprehensive or targeted restrictive measures under international and

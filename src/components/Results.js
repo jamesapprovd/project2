@@ -11,14 +11,14 @@ const Results = (props) => {
     return (
       <>
         <h4>
-          <strong>{results.properties.name}</strong>
+          <strong>{results.properties.name[0]}</strong>
         </h4>
         <br />
         <h5>{results.schema}</h5>
         <h5>Sanction type: {results.datasets}</h5>
         <h5>Birthdate: {results.properties.birthDate}</h5>
         <h5>Position: {results.properties.position}</h5>
-        <a href="{results.properties.sourceUrl}">Further Information</a>
+        <a href={results.properties.sourceUrl}>Further Information</a>
       </>
     );
   });

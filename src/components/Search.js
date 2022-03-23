@@ -29,7 +29,6 @@ const Search = (props) => {
         </label>
         {/* <input type="submit" value="Search" /> */}
       </form>
-      <h5>Last update: 22 March 2021</h5>
     </div>
   );
 };

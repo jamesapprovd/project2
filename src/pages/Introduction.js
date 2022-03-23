@@ -3,7 +3,8 @@ import React from "react";
 const Introduction = () => {
   return (
     <div>
-      <h1>What are sanctions?</h1>
+      <br />
+      <h3>What are sanctions?</h3>
       <p>
         The United Nations Security Council (UNSC) sanctions regimes aim to
         prevent or settle conflicts, curtail nuclear proliferation, counter
@@ -38,7 +39,7 @@ const Introduction = () => {
         sanction obligations. Failure to comply can lead to significant legal,
         financial and reputational ramifications.
       </p>
-      <h1>What is sanctions screening?</h1>
+      <h3>What is sanctions screening?</h3>
       <p>
         Sanctions screening involves screening individuals, groups or companies
         against designated sanction lists according to the countries in which an
