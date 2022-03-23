@@ -9,22 +9,19 @@ const Home = () => {
   const [hasSearched, setHasSearched] = useState(false);
 
   return (
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
+    <div className="container">
+      <div className="row">
+        <div className="col-sm-6">
           <br />
-          <img
-            src="https://i.imgur.com/1fS85JM.png"
-            alt="SC Logo"
-            width="238"
-            height="238"
-          ></img>
-
-          <h3>Sanctions Checker</h3>
-          <p>
-            Ensure that the parties you work with are compliant with sanctions
-            laws
-          </p>
+          <div>
+            <img
+              src="https://i.imgur.com/1fS85JM.png"
+              alt="SC Logo"
+              width="238"
+              height="238"
+            ></img>
+          </div>
+          <br />
           {hasSearched ? (
             <Results
               userInputQuery={query}
@@ -34,8 +31,13 @@ const Home = () => {
             <Search setQueryA={setQuery} setHasSearchedKey={setHasSearched} />
             //this is where I linked my props
           )}
+          <p>
+            &copy; <b>Sanctions Checker:</b> <br />
+            Ensure that the parties you work with are compliant with sanctions
+            laws
+          </p>
         </div>
-        <div class="col-sm-6">
+        <div className="col-sm-6">
           <Graphic />
         </div>
       </div>

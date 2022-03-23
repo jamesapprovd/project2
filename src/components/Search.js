@@ -19,6 +19,7 @@ const Search = (props) => {
             type="text"
             name="search"
             placeholder="Type name of individual or entity"
+            sx={{ width: 300 }}
           />
           {/* <input
             className="search"
