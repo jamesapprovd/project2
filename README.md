@@ -1,4 +1,4 @@
-# project2
+# Sanctions Checker
 
 ## Description
 
@@ -38,8 +38,7 @@ List of unsolved problems which would be fixed in future iterations.
 
 ```
 
-- li
-- li
+- Due to the varied sources of sanctions data, a person's name may appear multiple times in the search results due to different permutations (first name, last name). While it is good to see the various sanctions on the same person (from different countries), future permutation of the app will consolidate search results for the same person and avoid repetition.
 
 
 ```
