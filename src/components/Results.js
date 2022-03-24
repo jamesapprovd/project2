@@ -16,7 +16,7 @@ const Results = (props) => {
         </p>
         <p>{results.schema}</p>
         <p>
-          <u>Sanction type:</u> {results.datasets[0]}
+          <u>Category:</u> {results.datasets[0]}
         </p>
 
         {results.properties.birthDate === undefined ? (
@@ -35,11 +35,42 @@ const Results = (props) => {
           </p>
         )}
 
+        {results.properties.country === undefined ? (
+          ""
+        ) : (
+          <p>
+            <u>Country:</u> {results.properties.country[0]}
+          </p>
+        )}
+
+        {results.properties.registrationNumber === undefined ? (
+          ""
+        ) : (
+          <p>
+            <u>Registration Number:</u>{" "}
+            {results.properties.registrationNumber[0]}
+          </p>
+        )}
+
+        {results.properties.notes === undefined ? (
+          ""
+        ) : (
+          <p>
+            <u>Notes:</u> {results.properties.notes[0]}
+          </p>
+        )}
+
         {results.properties.sourceUrl === undefined ? (
           ""
         ) : (
           <p>
-            <u>Further Information:</u> {results.properties.sourceUrl[0]}
+            <u>Further Information:</u>{" "}
+            <a href={results.properties.sourceUrl[0].caption}>
+              {results.properties.sourceUrl[0].caption}
+            </a>
+            <a href={results.properties.sourceUrl[0]}>
+              {results.properties.sourceUrl[0]}
+            </a>
           </p>
         )}
       </>
@@ -78,6 +109,12 @@ const Results = (props) => {
           Back to Search
         </Button>
       </Stack>
+      <br />
+      <p>
+        <u>
+          Results returned for: <b>"{props.userInputQuery}"</b>
+        </u>
+      </p>
       <br />
       {returnResults.length > 0 ? allResults : <NoResults />}
     </>

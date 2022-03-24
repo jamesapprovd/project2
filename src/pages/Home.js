@@ -32,9 +32,8 @@ const Home = () => {
             //this is where I linked my props
           )}
           <p>
-            &copy; <b>Sanctions Checker:</b> <br />
-            Ensure that the parties you work with are compliant with sanctions
-            laws
+            &copy; <b>Sanctions Checker: </b>
+            Know who you're dealing with
           </p>
         </div>
         <div className="col-sm-6">

@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const NoResultsPage = () => {
+const NoResults = () => {
   return (
     <div>
       <br />
@@ -18,4 +17,4 @@ const NoResultsPage = () => {
   );
 };
 
-export default NoResultsPage;
+export default NoResults;
