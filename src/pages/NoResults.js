@@ -3,7 +3,6 @@ import React from "react";
 const NoResults = () => {
   return (
     <div>
-      <br />
       <h5>No matching personnel or entities were found</h5>
       <p>Try searching a partial name, or use a different spelling</p>
       <br />

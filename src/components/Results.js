@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import NoResults from "../pages/NoResults";
+import CardContent from "@mui/material/CardContent";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 const Results = (props) => {
   // console.log(props.userInputQuery);
@@ -9,75 +11,76 @@ const Results = (props) => {
   console.log(returnResults);
   const allResults = returnResults.map((results, index) => {
     console.log(results);
+
     return (
       <>
-        <p>
-          <b>{results.properties.name[0]}</b>
-        </p>
-        <p>{results.schema}</p>
-        <p>
-          <u>Category:</u> {results.datasets[0]}
-        </p>
-
-        {results.properties.birthDate === undefined ? (
-          ""
-        ) : (
-          <p>
-            <u>Birthdate:</u> {results.properties.birthDate[0]}
-          </p>
-        )}
-
-        {results.properties.position === undefined ? (
-          ""
-        ) : (
-          <p>
-            <u>Position:</u> {results.properties.position[0]}
-          </p>
-        )}
-
-        {results.properties.country === undefined ? (
-          ""
-        ) : (
-          <p>
-            <u>Country:</u> {results.properties.country[0]}
-          </p>
-        )}
-
-        {results.properties.registrationNumber === undefined ? (
-          ""
-        ) : (
-          <p>
-            <u>Registration Number:</u>{" "}
-            {results.properties.registrationNumber[0]}
-          </p>
-        )}
-
-        {results.properties.notes === undefined ? (
-          ""
-        ) : (
-          <p>
-            <u>Notes:</u> {results.properties.notes[0]}
-          </p>
-        )}
-
-        {results.properties.sourceUrl === undefined ? (
-          ""
-        ) : (
-          <p>
-            <u>Further Information:</u>{" "}
-            <a href={results.properties.sourceUrl[0].caption}>
-              {results.properties.sourceUrl[0].caption}
-            </a>
-            <a href={results.properties.sourceUrl[0]}>
-              {results.properties.sourceUrl[0]}
-            </a>
-          </p>
-        )}
+        <CardContent>
+          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+            {results.schema}
+          </Typography>
+          <Typography variant="h5" component="div">
+            {results.properties.name[0]}
+          </Typography>
+          <Typography sx={{ mb: 1.5 }} color="text.secondary">
+            Category: {results.datasets[0]}
+          </Typography>
+          <Typography variant="body2">
+            {results.properties.birthDate === undefined ? (
+              ""
+            ) : (
+              <p>
+                <u>Birthdate:</u> {results.properties.birthDate[0]}
+              </p>
+            )}
+            {results.properties.position === undefined ? (
+              ""
+            ) : (
+              <p>
+                <u>Position:</u> {results.properties.position[0]}
+              </p>
+            )}
+            {results.properties.country === undefined ? (
+              ""
+            ) : (
+              <p>
+                <u>Country:</u> {results.properties.country[0]}
+              </p>
+            )}
+            {results.properties.registrationNumber === undefined ? (
+              ""
+            ) : (
+              <p>
+                <u>Registration Number:</u>{" "}
+                {results.properties.registrationNumber[0]}
+              </p>
+            )}
+            {results.properties.notes === undefined ? (
+              ""
+            ) : (
+              <p>
+                <u>Notes:</u> {results.properties.notes[0]}
+              </p>
+            )}
+            {results.properties.sourceUrl === undefined ? (
+              ""
+            ) : (
+              <p>
+                <u>Further Information:</u>{" "}
+                <a href={results.properties.sourceUrl[0].caption}>
+                  {results.properties.sourceUrl[0].caption}
+                </a>
+                <a href={results.properties.sourceUrl[0]}>
+                  {results.properties.sourceUrl[0]}
+                </a>
+              </p>
+            )}
+          </Typography>
+        </CardContent>
       </>
     );
   });
 
-  const url = `https://api.opensanctions.org/search/all?q=${props.userInputQuery}&limit=10&offset=0&fuzzy=false&nested=false`;
+  const url = `https://api.opensanctions.org/search/all?q=${props.userInputQuery}&limit=15&offset=0&fuzzy=false&nested=false`;
 
   useEffect(() => {
     fetchResults();
