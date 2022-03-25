@@ -13,7 +13,6 @@ The following technologies were used to build this project.
 ```
 - React framework
 - MUI with react
-- Ajax for API
 
 ```
 
