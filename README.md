@@ -1,5 +1,7 @@
 # Sanctions Checker
 
+Deployed on: https://sanctionschecker.netlify.app/
+
 ## Description
 
 Sanctions Checker allows users to check whether the individuals, companies or entities that they are working with are sanctioned by the United Nations Security Council or other countries.
